@@ -1,0 +1,876 @@
+.site-header {
+	&__top-sub-inner {
+		min-height: 35px;
+
+	}
+	&__top-inner{
+		min-height: 90px;
+	}
+	&__top-main-inner {
+		position: relative;
+
+		background-color: @bg-color-grey;
+	}
+	&__top-logo {
+		position: absolute;
+		left:0;
+		top:0;
+		bottom:0;
+
+		background: @white;
+		& img {
+			padding: 0px 15px;
+			margin-top: -17px;
+		}
+	}
+	&__nav-inner {
+		margin: 15px 0;
+	}
+}
+
+.top-sub{
+	&__list {
+		float: right;
+
+		margin: 0;
+		padding-left: 17%;
+
+		list-style: none;
+		vertical-align: top;
+		letter-spacing:  0.1rem;
+
+		& li {
+			display: inline-block;
+
+			vertical-align: top;
+		}
+	}
+//________HOVER________
+	&__link {
+		display: inline-block;
+		padding: 11px 13px;
+		
+		font-family: "Lato Regular", sans-serif;
+		font-size: @font-size;
+		color: #434343;
+		text-decoration: none;
+	}
+	&__link:hover {
+		transform: scale(1.15);
+		transition-duration: 0.3s;
+		transition-timing-function:ease-out;
+	}
+}
+
+.nav-user {
+	float: right;
+	letter-spacing:  0.1rem;
+	&__list {
+		list-style: none;
+
+		margin: 0;
+		padding: 0;
+
+		vertical-align: top;
+		& li {
+			display: inline-block;
+
+			background-color: @bg-color-blue;
+		}
+		& li:nth-of-type(2n+2) {
+			background-color: @bg-color-red;
+		}
+	}
+//________HOVER________
+	&__link {
+		display: inline-block;
+
+		padding: 40px 27px 35px;	
+		
+		font-family: "Lato Regular", sans-serif;
+		font-size: @font-size;
+		text-decoration: none;
+		color: @white;
+	}
+	&__link:hover {
+		color: @font-color-red;
+
+		background-color: @white;
+		
+		transition-duration: 0.4s;
+		transition-property: color;
+		transform: scale(1.15);
+		transition-timing-function: ease-out;
+	}
+
+//--------------ICON--FONT------------------
+
+	&__link--icon-gift::after {
+		content: "\e800";
+
+		display: inline-block;
+		width: 20px;
+		height: 100%;
+		margin-left: 10px;
+		margin-right: 5px;
+		
+		font-family: "fontello", serif;
+		font-size: 2.6rem;
+		line-height: 1rem;
+		text-decoration: none;
+		color: @white;
+	}
+	&__link--icon-basket::after {
+		content: "\e805";
+
+		display: inline-block;
+		width: 20px;
+		height: 100%;
+		margin-left: 10px;
+		margin-right: 5px;
+		
+		font-family: "fontello", serif;
+		font-size: 3rem;
+		line-height: 1rem;
+		text-decoration: none;
+		color: @white;
+	}
+
+//________HOVER_ICON_FONTS______
+	&__link--icon-gift:hover::after,
+	&__link--icon-basket:hover::after {
+		color: @font-color-red;
+
+		transition-duration: 0.4s;
+		transition-property: color;
+		transform: scale(1.15);
+		transition-timing-function: ease-out;
+	}
+
+}
+.icon-gift {
+	display: inline-block;
+	width: 10px;
+	height: 16px;
+	color: #000;
+}
+
+.site-nav {
+	letter-spacing:  0.1rem;
+	&__list {
+		list-style: none;
+
+		margin: 0;
+		padding: 0;
+
+		vertical-align: top;
+		text-align: center;
+
+		background: @bg-color-blue;
+		& li {
+			display: inline-block;
+		}
+	}
+	&__link {
+		display: inline-block;
+
+		padding: 30px 25px 25px;
+
+		font-family: "Lato Regular", sans-serif;
+		text-decoration: none;
+		font-size: @font-size;
+		color: @white;
+	}
+	&__link:hover {
+		color: @font-color-red;
+
+		background-color: @white;
+		
+		transition-property: color;
+		transform: scale(1.15);
+		transition-duration: 0.4s;
+		transition-timing-function: ease-out;
+	}
+}
+
+//---------promo--elements-----------
+
+.promo-item {
+	&--left-side{
+		padding-right: 0.73%;
+		padding-bottom: 5px;
+	}
+	&--right-side{
+		padding-bottom: 5px;		
+	}
+}
+
+//--------promo--elements--MEN--------
+
+.promo-item {
+	&--men {
+		position: relative;
+
+		min-height: 570px;
+
+		.mixin__bg-img("img__mens-wear.jpg");
+		.mixin__bg-position (center);
+		.mixin__bg-repeat (no-repeat);
+
+		background-color: #D1CCB9;
+		
+	}
+	&__text-top {
+		margin-bottom: 3px;
+		padding: 18px 20px 15px;
+
+		vertical-align: top;
+
+		background-color: rgba(86, 74, 99, 80%);
+	
+		& h1 {
+			font-family: "Aparajita Regular", "Aparajita", serif;
+			text-transform: uppercase;
+			color: @font-color-red;
+		}
+		
+		& p {
+			font-family: "Aparajita Regular", "Aparajita", serif;
+			color: @white;
+			text-transform: uppercase;
+		}
+	}
+	&__link {
+			display: inline-block;
+			text-decoration: none;
+			color: @white;
+	}
+//________HOVER________
+	&__link--men {
+		color: @font-color-red;
+	}		
+
+	&--men:hover .promo-item__link--men {
+		transform: scale(1.02);
+		transition-duration: 0.4s;
+		transition-timing-function: ease-out;
+	}
+	
+
+	&__text-top--men {
+		& h1 {
+			display: inline-block;
+			min-width: 20%;
+			margin: 0;
+			margin-top: -10px;
+			padding: 0;
+			
+			font-size: 5.812rem;
+			line-height: 5.812rem;
+		}
+		& p {
+			display: inline-block;
+			max-width: 95%;
+			margin: 0;
+			margin-top: -10px;
+			padding: 0;
+			padding-right: 5%;
+
+			font-size: 1.3rem;
+		}
+	}
+	
+	&__text-bottom--men {
+			display: inline-block;
+			width: 90%;
+			margin: 0;
+			padding: 10px 5%;
+			
+			font-family: "Aparajita Regular", "Aparajita", serif;
+			text-transform: uppercase;
+			text-align: center;
+			color: @white;
+			font-size: 2rem;
+
+			background-color: rgba(255, 90, 102, 88%);
+	}
+	&__text--men {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 48%;
+
+		margin-bottom: 12px;
+	}
+}
+
+//--------promo--elements--WOMEN--------
+
+.promo-item {
+	&--women {
+		position: relative;
+
+		.mixin__bg-img("img__womens-wear.jpg");
+		.mixin__bg-position (25% 5%);
+		.mixin__bg-repeat (no-repeat);
+	}
+	&__text-top--women {
+		margin-bottom: 3px;
+		padding: 12px 12px 12px;
+
+		vertical-align: top;
+
+		background-color: rgba(86, 74, 99, 80%);
+
+		& h1 {
+			font-family: "Aparajita Regular", "Aparajita", serif;
+			text-transform: uppercase;
+			color: @font-color-red;
+		}
+		& p {
+			font-family: "Aparajita Regular", "Aparajita", serif;
+			color: @white;
+			text-transform: uppercase;
+		}
+	}
+
+//________HOVER________
+
+	&__link--women {
+		text-decoration: none;
+		color: @font-color-red;
+	}
+	&--women:hover .promo-item__link--women {
+		transform: scale(1.02);
+		transition-duration: 0.4s;
+		transition-timing-function: ease-out;
+	}
+
+	&__text-top--women {
+		& h1 {
+			display: inline-block;
+			min-width: 20%;
+			margin: 0;
+			margin-top: 0px;
+			padding: 0;
+			
+			font-size: 3.5rem;
+			line-height: 3.5rem;
+		}
+		& p {
+			display: inline-block;
+			max-width: 100%;
+			margin: 0;
+			margin-top: -7px;
+			padding: 0;
+			padding-right: 0;
+
+			font-size: 1.2rem;
+		}
+	}
+	&__text--women {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 46.5%;
+
+		margin-bottom: 7px;
+	}
+}
+
+//--------promo--elements--BABY--------
+
+.promo-item {
+	&--baby {
+		position: relative;
+		
+		.mixin__bg-img("img__babys-shop.jpg");
+		.mixin__bg-position (50% 50%);
+		.mixin__bg-repeat (no-repeat);
+	}
+	&__text--baby {
+		position: absolute;
+		bottom: 0;
+		
+		right: 0;
+		
+		display: inline-block;
+		margin-bottom: 7px;
+		padding: 12px 12px 12px 10px;
+		padding: 0;
+
+		color: @white;
+	}
+	&__list {
+		display: table;
+		table-layout:fixed;
+
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		vertical-align: top;
+		& li {
+			display: table-cell;
+			height: 100%;
+
+			text-align: center;
+			vertical-align: bottom;
+		}
+	}
+	&__link {
+		text-decoration: none;
+	}
+	&__link--baby {
+		display: inline-block;
+		padding: 12px;
+		padding-top: 15px;
+		height: 100%;
+		min-width: 33px;
+		
+		color: @white;
+		font-size: @font-size;
+	}
+	&__li--cost {
+		height: 100%;
+		padding:12px 12px 12px;
+
+		font-size: @font-size;
+
+		background-color: @black;
+	}
+	
+	&__link--basket {
+		display: inline-block;
+		height: 30px;
+		min-width: 30px;
+		padding: 10px;
+			
+		color: @white;
+		font-size: @font-size;
+	}
+	&__link--gift {
+		display: inline-block;
+		height: 30px;
+		min-width: 30px;
+		padding: 10px;
+	
+		color: @white;
+		font-size: @font-size;
+	}
+	&__li--header-baby {
+		font-size: @font-size;
+
+		background-color: @bg-color-blue;
+	}
+	&__li--gift {
+		font-size: @font-size;
+
+		background-color: darken(@bg-color-blue, 10%);
+	}
+	&__li--basket {
+		font-size: @font-size;
+
+		background-color: @bg-color-red;
+	}
+	&__link--cost {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+
+//_______HOVER________
+
+	&__li--header-baby:hover {
+		transform: scale(1.03);
+		color: lighten(@white,5%);
+		background-color: lighten(@bg-color-blue,5%);
+		transition-duration: 0.1s;
+		transition-timing-function: ease-out;
+	}
+	&__li--gift:hover {
+		background-color: lighten(@bg-color-blue,5%);
+		transition-duration: 0.1s;
+		transition-timing-function: ease-out;
+	}
+	&__link--gift:hover {
+		transition-duration: 0.1s;
+		transition-timing-function: ease-out;
+	}
+	&__li--basket:hover {
+		background-color: lighten(@bg-color-red,5%);
+		transition-duration: 0.1s;
+		transition-timing-function: ease-out;
+	}
+	&__link--basket:hover {
+		transition-duration: 0.1s;
+		transition-timing-function: ease-out;
+	}
+	&__li--cost:hover {
+		background-color: @white;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+		& a {
+			color: @black;
+			transition-duration: 0.3s;
+			transition-timing-function: ease-out;
+		}
+	}
+
+//-----------ICON--FONT---------
+
+	&__link--icon-gift::after {
+		content:'\e800';
+
+		font-family: "fontello";
+		font-size: 2.3rem;
+		line-height: 2.7rem;
+	}
+	&__link--icon-basket::after {
+		content:'\e805';
+
+		font-family: "fontello";
+		font-size: 2.6rem;
+		line-height: 2.7rem;
+	}
+
+//----------HOVER--ICON--FONTS-------------
+
+	&__link--icon-gift:hover::after,
+	&__link--icon-basket:hover::after {
+		color: @font-color-grey;
+	}
+}
+
+
+//-------------form--search---------
+
+.form-search {
+	box-sizing: border-box;
+	height: 170px;
+	max-height: 170px;
+
+	margin: 0;
+	padding: 50px 8%;
+
+	
+	background-color: @bg-color-red;
+	&__input {
+		width: 82%;
+		padding: 25px 23px;
+		border: none; 
+
+		font-size: @font-size;
+
+
+		outline: none;
+
+		box-shadow: 1px 2px 7px rgba(0, 0, 0, 19%);
+	}
+	& label {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	&__link--seach {
+		text-decoration: none;
+		color: @white;
+		font-size: @font-size;
+
+		position: relative;
+
+		display: inline-block;
+		height: 30px;
+		width: 15%;
+	}
+//---------icon--fonts---------
+
+	&__link--seach::after {
+		content: "\e804";
+
+		position: absolute;
+		left: 25%;
+		top: 60%;
+
+		display: inline-block;
+
+
+		font-family: 'fontello';
+		font-size: 5.6rem;
+		line-height: 1rem;
+	}
+
+//--------HOVER-------------
+
+	&__input:focus {
+		box-shadow: 1px 1px 10px #05aecc;
+	}
+
+	&__link--seach:hover {
+		transform: scale(1.15);
+		transition-duration: 0.3s;
+	}
+
+
+}
+
+//----------promo--elements--CRAFTS--------
+
+.promo-item {
+	&--crafts {
+		position: relative;
+
+		min-height: 335px;
+
+		background-color: #96979f;
+		.mixin__bg-img("img__crafts.jpg");
+		.mixin__bg-position (50% 50%);
+		.mixin__bg-repeat (repeat);
+
+	}
+	&__text--crafts {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		
+		display: inline-block;
+
+		color: @white;
+	}
+	&__list--crafts {
+		display: table;
+		table-layout:fixed;
+
+		list-style: none;
+
+		margin: 0;
+		padding: 0;
+
+		& li {
+			display: table-cell;
+
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+	&__li--header-crafts {
+		background-color: rgba(88, 66, 87, 88%);
+	}
+		&__li--gift-crafts {
+		font-size: 3.0rem;
+
+		background-color: darken(@bg-color-blue, 10%)		
+	}
+		&__li--basket-crafts {
+		font-size: 3.0rem;
+
+		background-color: @bg-color-red;		
+	}
+	&__li--cost-crafts {
+
+		padding: 12px;
+
+		font-size: 2.4rem;
+
+		background-color: @black;
+	}
+	&__link {
+		text-transform: none;
+	}
+	&__link--crafts,
+	&__link--gift-crafts,
+	&__link--basket-crafts {
+		display: inline-block;
+
+		text-decoration: none;
+
+		color: @white;
+	}
+	&__link--crafts {
+		padding: 14px 40px  12px;
+		text-transform: uppercase;
+		font-size: 3.0rem;
+		line-height: 3rem;
+	}
+	&__link--gift-crafts {
+		vertical-align: bottom;
+		font-size: 3.0rem;
+	}
+	&__link--basket-crafts {		
+		vertical-align: bottom;
+		font-size: 3.0rem;
+	}
+	&__link--cost-crafts {
+		text-decoration: none;
+		color: @white;
+	}
+
+//___________HOVER________
+
+	&__link--crafts:hover {
+		transform: scale(1.05);
+		color: lighten(@white,5%);
+		//background-color: lighten(@bg-color-blue,5%);
+		transition-duration: 0.2s;
+		transition-timing-function: ease-out;
+	}
+	&__li--gift-crafts:hover {
+		background-color: lighten(@bg-color-blue,5%);
+		transition-duration: 0.1s;
+		transition-timing-function: ease-out;
+	}
+	&__li--basket-crafts:hover {
+		background-color: lighten(@bg-color-red,5%);
+		transition-duration: 0.1s;
+		transition-timing-function: ease-out;
+	}
+	&__li--cost-crafts:hover {
+		background-color: @white;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+		& a {
+			color: @black;
+			transition-duration: 0.3s;
+			transition-timing-function: ease-out;
+		}
+	}
+ 	//-----------ICON--FONT---------
+
+	&__link--icon-gift-crafts::after {
+		content:'\e800';
+
+		font-family: "fontello";
+		font-size: 2.3rem;
+		line-height: 3.5rem;
+	}
+	&__link--icon-basket-crafts::after {
+		content:'\e805';
+
+		font-family: "fontello";
+		font-size: 2.6rem;
+		line-height: 3.5rem;
+	}
+	&__link--icon-gift-crafts::after,
+	&__link--icon-basket-crafts::after {
+		display: inline-block;
+
+		padding: 10px;
+		height: 30px;
+		width: 30px;
+	}
+
+	//----------HOVER--ICON--FONTS-------------
+
+	&__link--icon-gift-crafts:hover::after,
+	&__link--icon-basket-crafts:hover::after {
+		color: @font-color-grey;
+	} 
+}
+
+//----------promo--elements--JEWELRY--------
+
+.promo-item {
+	&--jewelry {
+		position: relative;
+
+		min-height: 510px;
+
+		.mixin__bg-img("img__jewelry.jpg");
+		.mixin__bg-position (70% 50%);
+		.mixin__bg-repeat (no-repeat);
+	}
+	&__text--jewelry {
+		position: absolute;
+		bottom: 0%;
+		left: 100%;
+
+		-webkit-transform-origin: 0% 100%;
+    	-moz-transform-origin: 0% 100%;
+    	-o-transform-origin: 0% 100%;
+    	-ms-transform-origin: 0% 100%;
+    	transform-origin: 0% 100%;
+		-webkit-transform: rotate(-90deg); //Chrome, Safari
+		-moz-transform: rotate(-90deg); //Firefox
+		-o-transform: rotate(-90deg); //Opera
+		-ms-transform: rotate(-90deg); //IE
+		transform: rotate(-90deg); //браузеры без префексов
+		
+		min-width: 18%;
+		max-height: 90px;
+
+		background-color: rgba(63, 50, 86, 88%);
+		& h1 {
+			display: inline-block;
+			padding-right: 145px;
+			padding-left: 25px;
+			padding-top: 25px;
+			padding-bottom: 20px; 
+			margin: 0;
+
+			font-family: "Aparajita Regular", "Aparajita", serif;
+			font-size: 6.5rem;
+			text-transform: uppercase;
+			color: @white;
+			line-height: 6.5rem;
+		}
+		& span {
+			position: absolute;
+			top: -11%;
+			right: 10%;
+
+			display: inline-block;
+			width: 20%;
+			height: 111%;
+			
+			color: @white;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 2rem;
+			line-height: 10rem;
+
+			background-color: @bg-color-red;
+		}
+		& span::before {
+			content: "";
+
+			position: absolute;
+			top: -1%;
+   			right: 100%;
+
+			display: block;
+
+			border-bottom: 5px solid #c6535d;
+			border-right: 5px solid #c6535d;
+			border-top: 5px solid transparent;
+			border-left: 5px solid transparent;
+		}
+	}
+	&__link--jewelry {
+		text-decoration: none;
+		color: @white;
+
+		display: inline-block;
+	}
+
+//---------icon--fonts-------------
+
+	&__text-clock--icon-font::after {
+		content: "\e802";
+
+		font-family: "fontello";
+		font-size: 5rem;
+		line-height: 10.3rem;
+	}
+	
+//___________HOVER________
+
+	&--jewelry:hover .promo-item__link--jewelry {
+
+		transform: scale(1.1);
+		transition-duration: 0.4s;
+		transition-timing-function: ease-out;
+	}
+
+
+	
+}
