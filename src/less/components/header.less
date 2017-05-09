@@ -137,6 +137,7 @@
 	}
 
 //________HOVER_ICON_FONTS______
+
 	&__link--icon-gift:hover::after,
 	&__link--icon-basket:hover::after {
 		color: @font-color-red;
@@ -155,6 +156,8 @@
 	color: #000;
 }
 
+//------------site--nav-----------
+
 .site-nav {
 	letter-spacing:  0.1rem;
 	&__list {
@@ -168,6 +171,8 @@
 
 		background: @bg-color-blue;
 		& li {
+			position: relative;
+
 			display: inline-block;
 		}
 	}
@@ -190,6 +195,104 @@
 		transform: scale(1.15);
 		transition-duration: 0.4s;
 		transition-timing-function: ease-out;
+		& ~ .site-nav__sub-list {
+			display: block;
+		}
+	}
+	&__sub-list {
+		position: absolute;
+		top: 107%;
+		left: -8%;
+		z-index: 1000;
+
+		display: none;
+		width: 235px;
+		margin: 0;
+		padding: 0;
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-left: 20px;
+
+		list-style: none;
+
+		text-align: left;
+
+		background-color: rgba(255, 255, 255, 0.9);
+		box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.33);
+			&:hover {
+				display: block;
+			}
+
+		}
+	&__sub-li {
+		position: relative;
+
+		padding-top: 15px;
+		padding-bottom: 20px;
+
+		&:after {
+			content: "";
+
+			position: absolute;
+			bottom: 0px;
+			left:0;
+
+			display: block;
+			width: 100%;
+			height: 1px;
+
+			background-color: #cacaca;
+		}
+	}
+	&__sub-img {
+		display: block;
+		width: 72px;
+		height: 76px;
+		margin-right: 13px;
+
+		float: left;
+		clear: right;
+	}
+	&__sub-header {
+		padding: 0;
+		margin: 0;
+		margin-top: -4px;
+		
+		color: @font-color-red;
+		font-size: 1.6rem;
+	}
+	&__sub-link-item {
+		text-decoration: none;
+		text-transform: capitalize;
+		color: @font-color-red;
+	}
+	&__sub-text {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 3px;
+    	height: 35px;
+
+		text-transform: capitalize;
+		font-size: 1.4rem;
+		letter-spacing: initial;
+	}
+	&__sub-detail {
+		display: inline-block;
+		padding: 3px 25px;
+
+		text-decoration: none;
+		text-transform: capitalize;
+		color: @white;
+		text-align: center;
+		font-size: 1.4rem;
+
+		background-color: @bg-color-blue;
+	}
+	&__sub-see-all {
+		text-decoration: none;
+		text-transform: capitalize;
+		color: @font-color-red;
+		font-size: 1.6rem;
 	}
 }
 
@@ -419,6 +522,8 @@
 		}
 	}
 	&__link {
+		position: relative;
+
 		text-decoration: none;
 	}
 	&__link--baby {
@@ -469,6 +574,8 @@
 		background-color: darken(@bg-color-blue, 10%);
 	}
 	&__li--basket {
+		position: relative;
+
 		font-size: @font-size;
 
 		background-color: @bg-color-red;
@@ -502,6 +609,9 @@
 		transition-duration: 0.1s;
 		transition-timing-function: ease-out;
 	}
+	&__li--basket:hover > .promo-item__add-card {
+		display: block;
+	}
 	&__link--basket:hover {
 		transition-duration: 0.1s;
 		transition-timing-function: ease-out;
@@ -519,14 +629,14 @@
 
 //-----------ICON--FONT---------
 
-	&__link--icon-gift::after {
+	&__link--icon-gift::before {
 		content:'\e800';
 
 		font-family: "fontello";
 		font-size: 2.3rem;
 		line-height: 2.7rem;
 	}
-	&__link--icon-basket::after {
+	&__link--icon-basket::before {
 		content:'\e805';
 
 		font-family: "fontello";
@@ -540,6 +650,47 @@
 	&__link--icon-basket:hover::after {
 		color: @font-color-grey;
 	}
+
+//-----------add--to--card--------------
+
+	&__add-card {
+		display: none;
+
+		position: absolute;
+		top: -67%;
+		left: -78%;
+		z-index: 1000;
+
+		width: 78px;
+		padding: 5px 24px;
+		border: 1px solid @bg-color-red;
+		border-radius: 6px;
+
+		color: #000;
+
+		background-color: #fff;
+	}
+	&__add-card::before {
+		content: "";
+
+		position: absolute;
+		top: 98%;
+		left:43%;
+		
+		display: block;
+		box-sizing: content-box;
+		border-top: 9px solid @white;
+		border-left: 9px solid transparent;
+		border-right: 9px solid transparent; 
+		border-right: 9px solid transparent; 
+
+		background-color: transparent;
+	}
+	&__add-card-text {
+		text-decoration: none;
+		color: #434343;
+	}
+	
 }
 
 
@@ -561,7 +712,6 @@
 		border: none; 
 
 		font-size: @font-size;
-
 
 		outline: none;
 
@@ -610,6 +760,7 @@
 		transform: scale(1.15);
 		transition-duration: 0.3s;
 	}
+
 
 
 }
@@ -667,6 +818,7 @@
 		background-color: @bg-color-red;		
 	}
 	&__li--cost-crafts {
+		position: relative;
 
 		padding: 12px;
 
@@ -724,6 +876,9 @@
 		transition-duration: 0.1s;
 		transition-timing-function: ease-out;
 	}
+	&__li--basket-crafts:hover > .promo-item__add-card--crafts {
+		display: block;
+	}
 	&__li--cost-crafts:hover {
 		background-color: @white;
 		transition-duration: 0.3s;
@@ -765,6 +920,48 @@
 	&__link--icon-basket-crafts:hover::after {
 		color: @font-color-grey;
 	} 
+	&__add-card--crafts {
+		display: none;
+
+		position: absolute;
+		top: -57%;
+    	left: 52%;
+		z-index: 1000;
+
+		width: 78px;
+		padding: 5px 24px;
+		border: 1px solid @bg-color-red;
+		border-radius: 6px;
+
+		color: #000;
+		font-size: 1.6rem;
+
+		background-color: #fff;
+	}
+	&__add-card--crafts::before {
+		content: "";
+
+		position: absolute;
+		top: 98%;
+		left:43%;
+		
+		display: block;
+		box-sizing: content-box;
+		border-top: 9px solid @white;
+		border-left: 9px solid transparent;
+		border-right: 9px solid transparent; 
+		border-right: 9px solid transparent; 
+
+		background-color: transparent;
+	}
+	&__add-card-text--crafts {
+		padding: 0;
+		margin: 0;
+
+		text-decoration: none;
+		color: #434343;
+		font-size: 1.6rem;
+	}
 }
 
 //----------promo--elements--JEWELRY--------

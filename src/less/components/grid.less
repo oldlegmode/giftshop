@@ -77,6 +77,13 @@
 	html {
 		font-size: 8.5px		
 	}
+	.site-nav {
+		&__link:hover {
+			& ~ .site-nav__sub-list {
+				display: none;
+			}
+		}
+	}
 	.promo-item {
 		&--block-xs {
 			padding-bottom: 5px;
@@ -102,6 +109,9 @@
 		}
 		&--jewelry{
 			min-height: 410px !important;
+		}
+		&__li--basket:hover > .promo-item__add-card {
+			display: block;
 		}
 	}
 	.new-products {
@@ -254,6 +264,13 @@
 			}
 		}
 	}
+	.site-nav {
+		&__link:hover {
+			& ~ .site-nav__sub-list {
+				display: none;
+			}
+		}
+	}
 	.promo-item {
 		&--block-sm {
 			padding-bottom: 5px;
@@ -272,6 +289,9 @@
 		}
 		&--baby {
 			min-height: 245px;
+		}
+		&__li--basket:hover > .promo-item__add-card {
+			display: block;
 		}
 	}
 	.new-products {
@@ -687,13 +707,11 @@
 		}
 	}
 }
-
 .row {
 	&::after {
 		content: '';
   		display: table;
     	clear: both;
-	}
-	
+	}	
 }
 
