@@ -12,11 +12,11 @@
 
 
     request(data, fn);
-  };
+  });
 
   function request(data, fn) {
     var xhr = new XMLHttpRequest();
-    
+
 
     xhr.open('post', '/url', true);
 
@@ -28,7 +28,7 @@
         alert( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
         return;
       }
-    };
+    });
 
     xhr.send(data);
   } 
