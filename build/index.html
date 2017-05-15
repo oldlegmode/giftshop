@@ -6,6 +6,29 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <div id="register-container" class="popup__container popup--close">
+  
+  	<div class="popup__wrap">
+  		<span data-close="close" class="popup__close">Close</span>
+  		<form action="" class="popup__form">
+  			<label for="email-input" class="popup__label popup__label-email">E-mail</label>
+  			  <input id="email-input" type="email" class="popup__input popup__email" placeholder="E-mail">
+  			<br>
+  			<label for="phone-input" class="popup__label popup__label-phone">Phone number</label>
+  			  <input id="phone-input" type="phone" class="popup__input popup__phone" placeholder="Phone number">
+  			<br>
+  			<label for="password-input" class="popup__label popup__label-password">Password</label>
+  			  <input id="password-input" type="text" password="" class="popup__input popup__password" placeholder="Password">
+  			<br>
+  			<button type="submit" class="popup__submit">Submit</button>
+  		</form>
+  		
+  	</div>
+  </div>
+  
+  
+  
   <header class="grid-md grid-lg grid-sm grid-xs site-header">
   	
   		<div class="site-header__inner">
@@ -15,7 +38,7 @@
   						<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
   							<ul class="top-sub__list">
   								<li><a href="#" class="top-sub__link">Sell</a></li>
-  								<li><a href="#" class="top-sub__link">Registry</a></li>
+  								<li><a data-register-btn="true" href="#" class="top-sub__link">Registry</a></li>
   								<li><a href="#" class="top-sub__link">Community</a></li>
   								<li><a href="#" class="top-sub__link">Dioga</a></li>
   								<li><a href="#" class="top-sub__link">Mobile</a></li>
@@ -40,7 +63,7 @@
   								<nav class="nav-user">
   									<ul id='user-menu-list' class="nav-user__list nav-user__list--close-xs">
   										<li>
-  											<a href="" class="nav-user__link">Register</a>
+  											<a data-register-btn="true" href="" class="nav-user__link">Register</a>
   										</li>
   										<li>
   											<a href="" class="nav-user__link">Sign in</a>
@@ -681,7 +704,7 @@
   					</div>
   					<div class="who-we-are__register-btn-inner row">
   						<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-  							<button class="who-we-are__register-btn">Register now</button>
+  							<button data-register = "true" class="who-we-are__register-btn">Register now</button>
   						</div>
   					</div>
   				</section>
