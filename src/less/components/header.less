@@ -1,1082 +1,1093 @@
 .site-header {
-	&__top-sub-inner {
-		min-height: 35px;
+  &__top-sub-inner {
+    min-height: 35px;
+  }
+  &__top-inner {
+    min-height: 90px;
+  }
+  &__top-main-inner {
+    position: relative;
 
-	}
-	&__top-inner{
-		min-height: 90px;
-	}
-	&__top-main-inner {
-		position: relative;
+    background-color: @bg-color-grey;
+  }
+  &__top-logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
 
-		background-color: @bg-color-grey;
-	}
-	&__top-logo {
-		position: absolute;
-		left:0;
-		top:0;
-		bottom:0;
-
-		background: @white;
-		& img {
-			padding: 0px 15px;
-			margin-top: -17px;
-		}
-	}
-	&__nav-inner {
-		margin: 15px 0;
-	}
+    background: @white;
+    & img {
+      margin-top: -17px;
+      padding: 0 15px;
+    }
+  }
+  &__nav-inner {
+    margin: 15px 0;
+  }
 }
 
-.top-sub{
-	&__list {
-		float: right;
+.top-sub {
+  &__list {
+    float: right;
 
-		margin: 0;
-		padding-left: 17%;
+    margin: 0;
+    padding-left: 17%;
 
-		list-style: none;
-		vertical-align: top;
-		letter-spacing:  0.1rem;
+    list-style: none;
 
-		& li {
-			display: inline-block;
+    vertical-align: top;
+    letter-spacing: .1rem;
+    & li {
+      display: inline-block;
 
-			vertical-align: top;
-		}
-	}
-//________HOVER________
-	&__link {
-		display: inline-block;
-		padding: 11px 13px;
-		
-		font-family: "Lato Regular", sans-serif;
-		font-size: @font-size;
-		color: #434343;
-		text-decoration: none;
-	}
-	&__link:hover {
-		transform: scale(1.15);
-		transition-duration: 0.3s;
-		transition-timing-function:ease-out;
-	}
+      vertical-align: top;
+    }
+  }
+  //________HOVER________
+  &__link {
+    display: inline-block;
+
+    padding: 11px 13px;
+
+    font-family: 'Lato Regular', sans-serif;
+    font-size: @font-size;
+
+    text-decoration: none;
+
+    color: #434343;
+  }
+  &__link:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .3s;
+    transform: scale(1.15);
+  }
 }
 
 //-----------USER--NAV-------------
 
 .nav-user {
-	float: right;
-	letter-spacing:  0.1rem;
-	&__list {
-		list-style: none;
+  float: right;
 
-		margin: 0;
-		padding: 0;
+  letter-spacing: .1rem;
+  &__list {
+    margin: 0;
+    padding: 0;
 
-		vertical-align: top;
-		& li {
-			display: inline-block;
+    list-style: none;
 
-			background-color: @bg-color-blue;
-		}
-		& li:nth-of-type(2n+2) {
-			background-color: @bg-color-red;
-		}
-	}
-	&__link-current {
-		display: none;
-	}
+    vertical-align: top;
+    & li {
+      display: inline-block;
 
-	&__link {
-		display: inline-block;
+      background-color: @bg-color-blue;
+    }
+    & li:nth-of-type(2n+2) {
+      background-color: @bg-color-red;
+    }
+  }
+  &__link-current {
+    display: none;
+  }
+  &__link {
+    display: inline-block;
 
-		padding: 40px 27px 35px;	
-		
-		font-family: "Lato Regular", sans-serif;
-		font-size: @font-size;
-		text-decoration: none;
-		color: @white;
-	}
-	//________HOVER________
-	&__link:hover {
-		color: @font-color-red;
+    padding: 40px 27px 35px;
 
-		background-color: @white;
-		
-		transition-duration: 0.4s;
-		transition-property: color;
-		transform: scale(1.15);
-		transition-timing-function: ease-out;
-	}
+    font-family: 'Lato Regular', sans-serif;
+    font-size: @font-size;
 
-//--------------ICON--FONT------------------
+    text-decoration: none;
 
-	&__link--icon-gift::after {
-		content: "\e800";
+    color: @white;
+  }
+  //________HOVER________
+  &__link:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .4s;
+    transition-property: color;
+    transform: scale(1.15);
 
-		display: inline-block;
-		width: 20px;
-		height: 100%;
-		margin-left: 10px;
-		margin-right: 5px;
-		
-		font-family: "fontello", serif;
-		font-size: 2.6rem;
-		line-height: 1rem;
-		text-decoration: none;
-		color: @white;
-	}
-	&__link--icon-basket::after {
-		content: "\e805";
+    color: @font-color-red;
+    background-color: @white;
+  }
+  //--------------ICON--FONT------------------
+  &__link--icon-gift::after {
+    display: inline-block;
 
-		display: inline-block;
-		width: 20px;
-		height: 100%;
-		margin-left: 10px;
-		margin-right: 5px;
-		
-		font-family: "fontello", serif;
-		font-size: 3rem;
-		line-height: 1rem;
-		text-decoration: none;
-		color: @white;
-	}
+    width: 20px;
+    height: 100%;
+    margin-right: 5px;
+    margin-left: 10px;
 
-//________HOVER_ICON_FONTS______
+    font-family: 'fontello', serif;
+    font-size: 2.6rem;
+    line-height: 1rem;
 
-	&__link--icon-gift:hover::after,
-	&__link--icon-basket:hover::after {
-		color: @font-color-red;
+    content: '\e800';
+    text-decoration: none;
 
-		transition-duration: 0.4s;
-		transition-property: color;
-		transform: scale(1.15);
-		transition-timing-function: ease-out;
-	}
+    color: @white;
+  }
+  &__link--icon-basket::after {
+    display: inline-block;
 
+    width: 20px;
+    height: 100%;
+    margin-right: 5px;
+    margin-left: 10px;
+
+    font-family: 'fontello', serif;
+    font-size: 3rem;
+    line-height: 1rem;
+
+    content: '\e805';
+    text-decoration: none;
+
+    color: @white;
+  }
+  //________HOVER_ICON_FONTS______
+  &__link--icon-gift:hover::after,&__link--icon-basket:hover::after {
+    transition-timing-function: ease-out;
+    transition-duration: .4s;
+    transition-property: color;
+    transform: scale(1.15);
+
+    color: @font-color-red;
+  }
 }
 .icon-gift {
-	display: inline-block;
-	width: 10px;
-	height: 16px;
-	color: #000;
+  display: inline-block;
+
+  width: 10px;
+  height: 16px;
+
+  color: #000;
 }
 
 //------------site--nav-----------
 
 .site-nav {
-	letter-spacing:  0.1rem;
-	&__list {
-		list-style: none;
+  letter-spacing: .1rem;
+  &__list {
+    margin: 0;
+    padding: 0;
 
-		margin: 0;
-		padding: 0;
+    list-style: none;
 
-		vertical-align: top;
-		text-align: center;
+    text-align: center;
+    vertical-align: top;
 
-		background: @bg-color-blue;
-		& li {
-			position: relative;
+    background: @bg-color-blue;
+    & li {
+      position: relative;
 
-			display: inline-block;
-		}
-	}
-	&__link {
-		display: inline-block;
+      display: inline-block;
+    }
+  }
+  &__link {
+    display: inline-block;
 
-		padding: 30px 25px 25px;
+    padding: 30px 25px 25px;
 
-		font-family: "Lato Regular", sans-serif;
-		text-decoration: none;
-		font-size: @font-size;
-		color: @white;
-	}
+    font-family: 'Lato Regular', sans-serif;
+    font-size: @font-size;
 
-//--------HOVER--------
+    text-decoration: none;
 
-	&__link:hover {
-		color: @font-color-red;
+    color: @white;
+  }
+  //--------HOVER--------
+  &__link:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .4s;
+    transition-property: color;
+    transform: scale(1.15);
 
-		background-color: @white;
-		
-		transition-property: color;
-		transform: scale(1.15);
-		transition-duration: 0.4s;
-		transition-timing-function: ease-out;
-		& ~ .site-nav__sub-list {
-			display: block;
-		}
-	}
-	&__sub-list {
-		position: absolute;
-		top: 107%;
-		left: -8%;
-		z-index: 1000;
+    color: @font-color-red;
+    background-color: @white;
+    & ~ .site-nav__sub-list {
+      display: block;
+    }
+  }
+  &__sub-list {
+    position: absolute;
+    z-index: 1000;
+    top: 107%;
+    left: -8%;
 
-		display: none;
-		width: 235px;
-		margin: 0;
-		padding: 0;
-		padding-top: 10px;
-		padding-right: 20px;
-		padding-left: 20px;
+    display: none;
 
-		list-style: none;
+    width: 235px;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
 
-		text-align: left;
+    list-style: none;
 
-		background-color: rgba(255, 255, 255, 0.9);
-		box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.33);
-			&:hover {
-				display: block;
-			}
+    text-align: left;
 
-		}
-	&__sub-li {
-		position: relative;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, .33);
+    &:hover {
+      display: block;
+    }
+  }
+  &__sub-li {
+    position: relative;
 
-		padding-top: 15px;
-		padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
 
-		&:after {
-			content: "";
+      display: block;
 
-			position: absolute;
-			bottom: 0px;
-			left:0;
+      width: 100%;
+      height: 1px;
 
-			display: block;
-			width: 100%;
-			height: 1px;
+      content: '';
 
-			background-color: #cacaca;
-		}
-	}
-	&__sub-img {
-		display: block;
-		width: 72px;
-		height: 76px;
-		margin-right: 13px;
+      background-color: #cacaca;
+    }
+  }
+  &__sub-img {
+    display: block;
+    float: left;
+    clear: right;
 
-		float: left;
-		clear: right;
-	}
-	&__sub-header {
-		padding: 0;
-		margin: 0;
-		margin-top: -4px;
-		
-		color: @font-color-red;
-		font-size: 1.6rem;
-	}
-	&__sub-link-item {
-		text-decoration: none;
-		text-transform: capitalize;
-		color: @font-color-red;
-	}
-	&__sub-text {
-		padding: 0;
-		margin: 0;
-		margin-bottom: 3px;
-    	height: 35px;
+    width: 72px;
+    height: 76px;
+    margin-right: 13px;
+  }
+  &__sub-header {
+    margin: 0;
+    margin-top: -4px;
+    padding: 0;
 
-		text-transform: capitalize;
-		font-size: 1.4rem;
-		letter-spacing: initial;
-	}
-	&__sub-detail {
-		display: inline-block;
-		padding: 3px 25px;
+    font-size: 1.6rem;
 
-		text-decoration: none;
-		text-transform: capitalize;
-		color: @white;
-		text-align: center;
-		font-size: 1.4rem;
+    color: @font-color-red;
+  }
+  &__sub-link-item {
+    text-decoration: none;
+    text-transform: capitalize;
 
-		background-color: @bg-color-blue;
-	}
-	&__sub-see-all {
-		text-decoration: none;
-		text-transform: capitalize;
-		color: @font-color-red;
-		font-size: 1.6rem;
-	}
+    color: @font-color-red;
+  }
+  &__sub-text {
+    height: 35px;
+    margin: 0;
+    margin-bottom: 3px;
+    padding: 0;
+
+    font-size: 1.4rem;
+
+    letter-spacing: initial;
+    text-transform: capitalize;
+  }
+  &__sub-detail {
+    display: inline-block;
+
+    padding: 3px 25px;
+
+    font-size: 1.4rem;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    color: @white;
+    background-color: @bg-color-blue;
+  }
+  &__sub-see-all {
+    font-size: 1.6rem;
+
+    text-decoration: none;
+    text-transform: capitalize;
+
+    color: @font-color-red;
+  }
 }
 
 //---------promo--elements-----------
 
 .promo-item {
-	&--left-side{
-		padding-right: 0.73%;
-		padding-bottom: 5px;
-	}
-	&--right-side{
-		padding-bottom: 5px;		
-	}
+  &--left-side {
+    padding-right: .73%;
+    padding-bottom: 5px;
+  }
+  &--right-side {
+    padding-bottom: 5px;
+  }
 }
 
 //--------promo--elements--MEN--------
 
 .promo-item {
-	&--men {
-		position: relative;
+  &--men {
+    position: relative;
 
-		min-height: 570px;
+    min-height: 570px;
 
-		.mixin__bg-img("img__mens-wear.jpg");
-		.mixin__bg-position (center);
-		.mixin__bg-repeat (no-repeat);
+    background-color: #d1ccb9;
 
-		background-color: #D1CCB9;
-		
-	}
-	&__text-top {
-		margin-bottom: 3px;
-		padding: 18px 20px 15px;
+    .mixin__bg-img('img__mens-wear.jpg');
+    .mixin__bg-position (center);
+    .mixin__bg-repeat (no-repeat);
+  }
+  &__text-top {
+    margin-bottom: 3px;
+    padding: 18px 20px 15px;
 
-		vertical-align: top;
+    vertical-align: top;
 
-		background-color: rgba(86, 74, 99, 80%);
-	
-		& h1 {
-			font-family: "Aparajita Regular", "Aparajita", serif;
-			text-transform: uppercase;
-			color: @font-color-red;
-		}
-		
-		& p {
-			font-family: "Aparajita Regular", "Aparajita", serif;
-			color: @white;
-			text-transform: uppercase;
-		}
-	}
-	&__link {
-			display: inline-block;
-			text-decoration: none;
-			color: @white;
-	}
-//________HOVER________
-	&__link--men {
-		color: @font-color-red;
-	}		
+    background-color: rgba(86, 74, 99, 80%);
+    & h1 {
+      font-family: 'Aparajita Regular', 'Aparajita', serif;
 
-	&--men:hover .promo-item__link--men {
-		transform: scale(1.02);
-		transition-duration: 0.4s;
-		transition-timing-function: ease-out;
-	}
-	
+      text-transform: uppercase;
 
-	&__text-top--men {
-		& h1 {
-			display: inline-block;
-			min-width: 20%;
-			margin: 0;
-			margin-top: -10px;
-			padding: 0;
-			
-			font-size: 5.812rem;
-			line-height: 5.812rem;
-		}
-		& p {
-			display: inline-block;
-			max-width: 95%;
-			margin: 0;
-			margin-top: -10px;
-			padding: 0;
-			padding-right: 5%;
+      color: @font-color-red;
+    }
+    & p {
+      font-family: 'Aparajita Regular', 'Aparajita', serif;
 
-			font-size: 1.3rem;
-		}
-	}
-	
-	&__text-bottom--men {
-			display: inline-block;
-			width: 90%;
-			margin: 0;
-			padding: 10px 5%;
-			
-			font-family: "Aparajita Regular", "Aparajita", serif;
-			text-transform: uppercase;
-			text-align: center;
-			color: @white;
-			font-size: 2rem;
+      text-transform: uppercase;
 
-			background-color: rgba(255, 90, 102, 88%);
-	}
-	&__text--men {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 48%;
+      color: @white;
+    }
+  }
+  &__link {
+    display: inline-block;
 
-		margin-bottom: 12px;
-	}
+    text-decoration: none;
+
+    color: @white;
+  }
+  //________HOVER________
+  &__link--men {
+    color: @font-color-red;
+  }
+  &--men:hover .promo-item__link--men {
+    transition-timing-function: ease-out;
+    transition-duration: .4s;
+    transform: scale(1.02);
+  }
+  &__text-top--men {
+    & h1 {
+      display: inline-block;
+
+      min-width: 20%;
+      margin: 0;
+      margin-top: -10px;
+      padding: 0;
+
+      font-size: 5.812rem;
+      line-height: 5.812rem;
+    }
+    & p {
+      display: inline-block;
+
+      max-width: 95%;
+      margin: 0;
+      margin-top: -10px;
+      padding: 0;
+      padding-right: 5%;
+
+      font-size: 1.3rem;
+    }
+  }
+  &__text-bottom--men {
+    display: inline-block;
+
+    width: 90%;
+    margin: 0;
+    padding: 10px 5%;
+
+    font-family: 'Aparajita Regular', 'Aparajita', serif;
+    font-size: 2rem;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: @white;
+    background-color: rgba(255, 90, 102, 88%);
+  }
+  &__text--men {
+    position: absolute;
+    right: 48%;
+    bottom: 0;
+    left: 0;
+
+    margin-bottom: 12px;
+  }
 }
 
 //--------promo--elements--WOMEN--------
 
 .promo-item {
-	&--women {
-		position: relative;
+  &--women {
+    position: relative;
 
-		.mixin__bg-img("img__womens-wear.jpg");
-		.mixin__bg-position (25% 5%);
-		.mixin__bg-repeat (no-repeat);
-	}
-	&__text-top--women {
-		margin-bottom: 3px;
-		padding: 12px 12px 12px;
+    .mixin__bg-img('img__womens-wear.jpg');
+    .mixin__bg-position (25% 5%);
+    .mixin__bg-repeat (no-repeat);
+  }
+  &__text-top--women {
+    margin-bottom: 3px;
+    padding: 12px 12px 12px;
 
-		vertical-align: top;
+    vertical-align: top;
 
-		background-color: rgba(86, 74, 99, 80%);
+    background-color: rgba(86, 74, 99, 80%);
+    & h1 {
+      font-family: 'Aparajita Regular', 'Aparajita', serif;
 
-		& h1 {
-			font-family: "Aparajita Regular", "Aparajita", serif;
-			text-transform: uppercase;
-			color: @font-color-red;
-		}
-		& p {
-			font-family: "Aparajita Regular", "Aparajita", serif;
-			color: @white;
-			text-transform: uppercase;
-		}
-	}
+      text-transform: uppercase;
 
-//________HOVER________
+      color: @font-color-red;
+    }
+    & p {
+      font-family: 'Aparajita Regular', 'Aparajita', serif;
 
-	&__link--women {
-		text-decoration: none;
-		color: @font-color-red;
-	}
-	&--women:hover .promo-item__link--women {
-		transform: scale(1.02);
-		transition-duration: 0.4s;
-		transition-timing-function: ease-out;
-	}
+      text-transform: uppercase;
 
-	&__text-top--women {
-		& h1 {
-			display: inline-block;
-			min-width: 20%;
-			margin: 0;
-			margin-top: 0px;
-			padding: 0;
-			
-			font-size: 3.5rem;
-			line-height: 3.5rem;
-		}
-		& p {
-			display: inline-block;
-			max-width: 100%;
-			margin: 0;
-			margin-top: -7px;
-			padding: 0;
-			padding-right: 0;
+      color: @white;
+    }
+  }
+  //________HOVER________
+  &__link--women {
+    text-decoration: none;
 
-			font-size: 1.2rem;
-		}
-	}
-	&__text--women {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 46.5%;
+    color: @font-color-red;
+  }
+  &--women:hover .promo-item__link--women {
+    transition-timing-function: ease-out;
+    transition-duration: .4s;
+    transform: scale(1.02);
+  }
+  &__text-top--women {
+    & h1 {
+      display: inline-block;
 
-		margin-bottom: 7px;
-	}
+      min-width: 20%;
+      margin: 0;
+      margin-top: 0;
+      padding: 0;
+
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
+    & p {
+      display: inline-block;
+
+      max-width: 100%;
+      margin: 0;
+      margin-top: -7px;
+      padding: 0;
+      padding-right: 0;
+
+      font-size: 1.2rem;
+    }
+  }
+  &__text--women {
+    position: absolute;
+    right: 46.5%;
+    bottom: 0;
+    left: 0;
+
+    margin-bottom: 7px;
+  }
 }
 
 //--------promo--elements--BABY--------
 
 .promo-item {
-	&--baby {
-		position: relative;
-		
-		.mixin__bg-img("img__babys-shop.jpg");
-		.mixin__bg-position (50% 50%);
-		.mixin__bg-repeat (no-repeat);
-	}
-	&__text--baby {
-		position: absolute;
-		bottom: 0;
-		
-		right: 0;
-		
-		display: inline-block;
-		margin-bottom: 7px;
-		padding: 12px 12px 12px 10px;
-		padding: 0;
+  &--baby {
+    position: relative;
 
-		color: @white;
-	}
-	&__list {
-		display: table;
-		table-layout:fixed;
+    .mixin__bg-img('img__babys-shop.jpg');
+    .mixin__bg-position (50% 50%);
+    .mixin__bg-repeat (no-repeat);
+  }
+  &__text--baby {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 
-		list-style: none;
-		margin: 0;
-		padding: 0;
+    display: inline-block;
 
-		vertical-align: top;
-		& li {
-			display: table-cell;
-			height: 100%;
+    margin-bottom: 7px;
+    padding: 12px 12px 12px 10px;
+    padding: 0;
 
-			text-align: center;
-			vertical-align: bottom;
-		}
-	}
-	&__link {
-		position: relative;
+    color: @white;
+  }
+  &__list {
+    display: table;
 
-		text-decoration: none;
-	}
-	&__link--baby {
-		display: inline-block;
-		padding: 12px;
-		padding-top: 15px;
-		height: 100%;
-		min-width: 33px;
-		
-		color: @white;
-		font-size: @font-size;
-	}
-	&__li--cost {
-		height: 100%;
-		padding:12px 12px 12px;
+    margin: 0;
+    padding: 0;
 
-		font-size: @font-size;
+    table-layout: fixed;
+    list-style: none;
 
-		background-color: @black;
-	}
-	
-	&__link--basket {
-		display: inline-block;
-		height: 30px;
-		min-width: 30px;
-		padding: 10px;
-			
-		color: @white;
-		font-size: @font-size;
-	}
-	&__link--gift {
-		display: inline-block;
-		height: 30px;
-		min-width: 30px;
-		padding: 10px;
-	
-		color: @white;
-		font-size: @font-size;
-	}
-	&__li--header-baby {
-		font-size: @font-size;
+    vertical-align: top;
+    & li {
+      display: table-cell;
 
-		background-color: @bg-color-blue;
-	}
-	&__li--gift {
-		font-size: @font-size;
+      height: 100%;
 
-		background-color: darken(@bg-color-blue, 10%);
-	}
-	&__li--basket {
-		position: relative;
+      text-align: center;
+      vertical-align: bottom;
+    }
+  }
+  &__link {
+    position: relative;
 
-		font-size: @font-size;
+    text-decoration: none;
+  }
+  &__link--baby {
+    display: inline-block;
 
-		background-color: @bg-color-red;
-	}
-	&__link--cost {
-		display: inline-block;
-		width: 100%;
-		height: 100%;
-	}
+    min-width: 33px;
+    height: 100%;
+    padding: 12px;
+    padding-top: 15px;
 
-//_______HOVER________
+    font-size: @font-size;
 
-	&__li--header-baby:hover {
-		transform: scale(1.03);
-		color: lighten(@white,5%);
-		background-color: lighten(@bg-color-blue,5%);
-		transition-duration: 0.1s;
-		transition-timing-function: ease-out;
-	}
-	&__li--gift:hover {
-		background-color: lighten(@bg-color-blue,5%);
-		transition-duration: 0.1s;
-		transition-timing-function: ease-out;
-	}
-	&__link--gift:hover {
-		transition-duration: 0.1s;
-		transition-timing-function: ease-out;
-	}
-	&__li--basket:hover {
-		background-color: lighten(@bg-color-red,5%);
-		transition-duration: 0.1s;
-		transition-timing-function: ease-out;
-	}
-	&__li--basket:hover > .promo-item__add-card {
-		display: block;
-	}
-	&__link--basket:hover {
-		transition-duration: 0.1s;
-		transition-timing-function: ease-out;
-	}
-	&__li--cost:hover {
-		background-color: @white;
-		transition-duration: 0.3s;
-		transition-timing-function: ease-out;
-		& a {
-			color: @black;
-			transition-duration: 0.3s;
-			transition-timing-function: ease-out;
-		}
-	}
+    color: @white;
+  }
+  &__li--cost {
+    height: 100%;
+    padding: 12px 12px 12px;
 
-//-----------ICON--FONT---------
+    font-size: @font-size;
 
-	&__link--icon-gift::before {
-		content:'\e800';
+    background-color: @black;
+  }
+  &__link--basket {
+    display: inline-block;
 
-		font-family: "fontello";
-		font-size: 2.3rem;
-		line-height: 2.7rem;
-	}
-	&__link--icon-basket::before {
-		content:'\e805';
+    min-width: 30px;
+    height: 30px;
+    padding: 10px;
 
-		font-family: "fontello";
-		font-size: 2.6rem;
-		line-height: 2.7rem;
-	}
+    font-size: @font-size;
 
-//----------HOVER--ICON--FONTS-------------
+    color: @white;
+  }
+  &__link--gift {
+    display: inline-block;
 
-	&__link--icon-gift:hover::after,
-	&__link--icon-basket:hover::after {
-		color: @font-color-grey;
-	}
+    min-width: 30px;
+    height: 30px;
+    padding: 10px;
 
-//-----------add--to--card--------------
+    font-size: @font-size;
 
-	&__add-card {
-		display: none;
+    color: @white;
+  }
+  &__li--header-baby {
+    font-size: @font-size;
 
-		position: absolute;
-		top: -67%;
-		left: -78%;
-		z-index: 1000;
+    background-color: @bg-color-blue;
+  }
+  &__li--gift {
+    font-size: @font-size;
 
-		width: 78px;
-		padding: 5px 24px;
-		border: 1px solid @bg-color-red;
-		border-radius: 6px;
+    background-color: darken(@bg-color-blue, 10%);
+  }
+  &__li--basket {
+    position: relative;
 
-		color: #000;
+    font-size: @font-size;
 
-		background-color: #fff;
-	}
-	&__add-card::before {
-		content: "";
+    background-color: @bg-color-red;
+  }
+  &__link--cost {
+    display: inline-block;
 
-		position: absolute;
-		top: 98%;
-		left:43%;
-		
-		display: block;
-		box-sizing: content-box;
-		border-top: 9px solid @white;
-		border-left: 9px solid transparent;
-		border-right: 9px solid transparent; 
-		border-right: 9px solid transparent; 
+    width: 100%;
+    height: 100%;
+  }
+  //_______HOVER________
+  &__li--header-baby:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .1s;
+    transform: scale(1.03);
 
-		background-color: transparent;
-	}
-	&__add-card-text {
-		text-decoration: none;
-		color: #434343;
-	}
-	
+    color: lighten(@white,5%);
+    background-color: lighten(@bg-color-blue,5%);
+  }
+  &__li--gift:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .1s;
+
+    background-color: lighten(@bg-color-blue,5%);
+  }
+  &__link--gift:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .1s;
+  }
+  &__li--basket:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .1s;
+
+    background-color: lighten(@bg-color-red,5%);
+  }
+  &__li--basket:hover > .promo-item__add-card {
+    display: block;
+  }
+  &__link--basket:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .1s;
+  }
+  &__li--cost:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .3s;
+
+    background-color: @white;
+    & a {
+      transition-timing-function: ease-out;
+      transition-duration: .3s;
+
+      color: @black;
+    }
+  }
+  //-----------ICON--FONT---------
+  &__link--icon-gift::before {
+    font-family: 'fontello';
+    font-size: 2.3rem;
+    line-height: 2.7rem;
+
+    content: '\e800';
+  }
+  &__link--icon-basket::before {
+    font-family: 'fontello';
+    font-size: 2.6rem;
+    line-height: 2.7rem;
+
+    content: '\e805';
+  }
+  //----------HOVER--ICON--FONTS-------------
+  &__link--icon-gift:hover::after,&__link--icon-basket:hover::after {
+    color: @font-color-grey;
+  }
+  //-----------add--to--card--------------
+  &__add-card {
+    position: absolute;
+    z-index: 1000;
+    top: -67%;
+    left: -78%;
+
+    display: none;
+
+    width: 78px;
+    padding: 5px 24px;
+    border: 1px solid @bg-color-red;
+
+    color: #000;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+  &__add-card::before {
+    position: absolute;
+    top: 98%;
+    left: 43%;
+
+    display: block;
+
+    box-sizing: content-box;
+    border-top: 9px solid @white;
+    border-right: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+
+    content: '';
+
+    background-color: transparent;
+  }
+  &__add-card-text {
+    text-decoration: none;
+
+    color: #434343;
+  }
 }
 
 
 //-------------form--search---------
 
 .form-search {
-	box-sizing: border-box;
-	height: 170px;
-	max-height: 170px;
+  box-sizing: border-box;
+  height: 170px;
+  max-height: 170px;
+  margin: 0;
+  padding: 50px 8%;
 
-	margin: 0;
-	padding: 50px 8%;
+  background-color: @bg-color-red;
+  &__input {
+    width: 82%;
+    padding: 25px 23px;
+    border: none;
 
-	
-	background-color: @bg-color-red;
-	&__input {
-		width: 82%;
-		padding: 25px 23px;
-		border: none; 
+    font-size: @font-size;
 
-		font-size: @font-size;
+    outline: none;
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, 19%);
+  }
+  & label {
+    text-align: center;
+    vertical-align: middle;
+  }
+  &__link--seach {
+    position: relative;
 
-		outline: none;
+    display: inline-block;
 
-		box-shadow: 1px 2px 7px rgba(0, 0, 0, 19%);
-	}
-	& label {
-		text-align: center;
-		vertical-align: middle;
-	}
+    width: 15%;
+    height: 30px;
 
-	&__link--seach {
-		text-decoration: none;
-		color: @white;
-		font-size: @font-size;
+    font-size: @font-size;
 
-		position: relative;
+    text-decoration: none;
 
-		display: inline-block;
-		height: 30px;
-		width: 15%;
-	}
-//---------icon--fonts---------
+    color: @white;
+  }
+  //---------icon--fonts---------
+  &__link--seach::after {
+    position: absolute;
+    top: 60%;
+    left: 25%;
 
-	&__link--seach::after {
-		content: "\e804";
+    display: inline-block;
 
-		position: absolute;
-		left: 25%;
-		top: 60%;
+    font-family: 'fontello';
+    font-size: 5.6rem;
+    line-height: 1rem;
 
-		display: inline-block;
-
-
-		font-family: 'fontello';
-		font-size: 5.6rem;
-		line-height: 1rem;
-	}
-
-//--------HOVER-------------
-
-	&__input:focus {
-		box-shadow: 1px 1px 10px #05aecc;
-	}
-
-	&__link--seach:hover {
-		transform: scale(1.15);
-		transition-duration: 0.3s;
-	}
-
-
-
+    content: '\e804';
+  }
+  //--------HOVER-------------
+  &__input:focus {
+    box-shadow: 1px 1px 10px #05aecc;
+  }
+  &__link--seach:hover {
+    transition-duration: .3s;
+    transform: scale(1.15);
+  }
 }
 
 //----------promo--elements--CRAFTS--------
 
 .promo-item {
-	&--crafts {
-		position: relative;
+  &--crafts {
+    position: relative;
 
-		min-height: 335px;
+    min-height: 335px;
 
-		background-color: #96979f;
-		.mixin__bg-img("img__crafts.jpg");
-		.mixin__bg-position (50% 50%);
-		.mixin__bg-repeat (repeat);
+    background-color: #96979f;
 
-	}
-	&__text--crafts {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		
-		display: inline-block;
+    .mixin__bg-img('img__crafts.jpg');
+    .mixin__bg-position (50% 50%);
+    .mixin__bg-repeat (repeat);
+  }
+  &__text--crafts {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 
-		color: @white;
-	}
-	&__list--crafts {
-		display: table;
-		table-layout:fixed;
+    display: inline-block;
 
-		list-style: none;
+    color: @white;
+  }
+  &__list--crafts {
+    display: table;
 
-		margin: 0;
-		padding: 0;
+    margin: 0;
+    padding: 0;
 
-		& li {
-			display: table-cell;
+    table-layout: fixed;
+    list-style: none;
+    & li {
+      display: table-cell;
 
-			text-align: center;
-			vertical-align: middle;
-		}
-	}
-	&__li--header-crafts {
-		background-color: rgba(88, 66, 87, 88%);
-	}
-		&__li--gift-crafts {
-		font-size: 3.0rem;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+  &__li--header-crafts {
+    background-color: rgba(88, 66, 87, 88%);
+  }
+  &__li--gift-crafts {
+    font-size: 3.0rem;
 
-		background-color: darken(@bg-color-blue, 10%)		
-	}
-		&__li--basket-crafts {
-		font-size: 3.0rem;
+    background-color: darken(@bg-color-blue, 10%);
+  }
+  &__li--basket-crafts {
+    font-size: 3.0rem;
 
-		background-color: @bg-color-red;		
-	}
-	&__li--cost-crafts {
-		position: relative;
+    background-color: @bg-color-red;
+  }
+  &__li--cost-crafts {
+    position: relative;
 
-		padding: 12px;
+    padding: 12px;
 
-		font-size: 2.4rem;
+    font-size: 2.4rem;
 
-		background-color: @black;
-	}
-	&__link {
-		text-transform: none;
-	}
-	&__link--crafts,
-	&__link--gift-crafts,
-	&__link--basket-crafts {
-		display: inline-block;
+    background-color: @black;
+  }
+  &__link {
+    text-transform: none;
+  }
+  &__link--crafts,&__link--gift-crafts,&__link--basket-crafts {
+    display: inline-block;
 
-		text-decoration: none;
+    text-decoration: none;
 
-		color: @white;
-	}
-	&__link--crafts {
-		padding: 14px 40px  12px;
-		text-transform: uppercase;
-		font-size: 3.0rem;
-		line-height: 3rem;
-	}
-	&__link--gift-crafts {
-		vertical-align: bottom;
-		font-size: 3.0rem;
-	}
-	&__link--basket-crafts {		
-		vertical-align: bottom;
-		font-size: 3.0rem;
-	}
-	&__link--cost-crafts {
-		text-decoration: none;
-		color: @white;
-	}
+    color: @white;
+  }
+  &__link--crafts {
+    padding: 14px 40px  12px;
 
-//___________HOVER________
+    font-size: 3.0rem;
+    line-height: 3rem;
 
-	&__link--crafts:hover {
-		transform: scale(1.05);
-		color: lighten(@white,5%);
-		//background-color: lighten(@bg-color-blue,5%);
-		transition-duration: 0.2s;
-		transition-timing-function: ease-out;
-	}
-	&__li--gift-crafts:hover {
-		background-color: lighten(@bg-color-blue,5%);
-		transition-duration: 0.1s;
-		transition-timing-function: ease-out;
-	}
-	&__li--basket-crafts:hover {
-		background-color: lighten(@bg-color-red,5%);
-		transition-duration: 0.1s;
-		transition-timing-function: ease-out;
-	}
-	&__li--basket-crafts:hover > .promo-item__add-card--crafts {
-		display: block;
-	}
-	&__li--cost-crafts:hover {
-		background-color: @white;
-		transition-duration: 0.3s;
-		transition-timing-function: ease-out;
-		& a {
-			color: @black;
-			transition-duration: 0.3s;
-			transition-timing-function: ease-out;
-		}
-	}
- 	//-----------ICON--FONT---------
+    text-transform: uppercase;
+  }
+  &__link--gift-crafts {
+    font-size: 3.0rem;
 
-	&__link--icon-gift-crafts::after {
-		content:'\e800';
+    vertical-align: bottom;
+  }
+  &__link--basket-crafts {
+    font-size: 3.0rem;
 
-		font-family: "fontello";
-		font-size: 2.3rem;
-		line-height: 3.5rem;
-	}
-	&__link--icon-basket-crafts::after {
-		content:'\e805';
+    vertical-align: bottom;
+  }
+  &__link--cost-crafts {
+    text-decoration: none;
 
-		font-family: "fontello";
-		font-size: 2.6rem;
-		line-height: 3.5rem;
-	}
-	&__link--icon-gift-crafts::after,
-	&__link--icon-basket-crafts::after {
-		display: inline-block;
+    color: @white;
+  }
+  //___________HOVER________
+  &__link--crafts:hover {
+    transition-timing-function: ease-out;
+    //background-color: lighten(@bg-color-blue,5%);
+    transition-duration: .2s;
+    transform: scale(1.05);
 
-		padding: 10px;
-		height: 30px;
-		width: 30px;
-	}
+    color: lighten(@white,5%);
+  }
+  &__li--gift-crafts:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .1s;
 
-	//----------HOVER--ICON--FONTS-------------
+    background-color: lighten(@bg-color-blue,5%);
+  }
+  &__li--basket-crafts:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .1s;
 
-	&__link--icon-gift-crafts:hover::after,
-	&__link--icon-basket-crafts:hover::after {
-		color: @font-color-grey;
-	} 
-	&__add-card--crafts {
-		display: none;
+    background-color: lighten(@bg-color-red,5%);
+  }
+  &__li--basket-crafts:hover > .promo-item__add-card--crafts {
+    display: block;
+  }
+  &__li--cost-crafts:hover {
+    transition-timing-function: ease-out;
+    transition-duration: .3s;
 
-		position: absolute;
-		top: -57%;
-    	left: 52%;
-		z-index: 1000;
+    background-color: @white;
+    & a {
+      transition-timing-function: ease-out;
+      transition-duration: .3s;
 
-		width: 78px;
-		padding: 5px 24px;
-		border: 1px solid @bg-color-red;
-		border-radius: 6px;
+      color: @black;
+    }
+  }
+  //-----------ICON--FONT---------
+  &__link--icon-gift-crafts::after {
+    font-family: 'fontello';
+    font-size: 2.3rem;
+    line-height: 3.5rem;
 
-		color: #000;
-		font-size: 1.6rem;
+    content: '\e800';
+  }
+  &__link--icon-basket-crafts::after {
+    font-family: 'fontello';
+    font-size: 2.6rem;
+    line-height: 3.5rem;
 
-		background-color: #fff;
-	}
-	&__add-card--crafts::before {
-		content: "";
+    content: '\e805';
+  }
+  &__link--icon-gift-crafts::after,&__link--icon-basket-crafts::after {
+    display: inline-block;
 
-		position: absolute;
-		top: 98%;
-		left:43%;
-		
-		display: block;
-		box-sizing: content-box;
-		border-top: 9px solid @white;
-		border-left: 9px solid transparent;
-		border-right: 9px solid transparent; 
-		border-right: 9px solid transparent; 
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+  }
+  //----------HOVER--ICON--FONTS-------------
+  &__link--icon-gift-crafts:hover::after,&__link--icon-basket-crafts:hover::after {
+    color: @font-color-grey;
+  }
+  &__add-card--crafts {
+    position: absolute;
+    z-index: 1000;
+    top: -57%;
+    left: 52%;
 
-		background-color: transparent;
-	}
-	&__add-card-text--crafts {
-		padding: 0;
-		margin: 0;
+    display: none;
 
-		text-decoration: none;
-		color: #434343;
-		font-size: 1.6rem;
-	}
+    width: 78px;
+    padding: 5px 24px;
+    border: 1px solid @bg-color-red;
+
+    font-size: 1.6rem;
+
+    color: #000;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+  &__add-card--crafts::before {
+    position: absolute;
+    top: 98%;
+    left: 43%;
+
+    display: block;
+
+    box-sizing: content-box;
+    border-top: 9px solid @white;
+    border-right: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+
+    content: '';
+
+    background-color: transparent;
+  }
+  &__add-card-text--crafts {
+    margin: 0;
+    padding: 0;
+
+    font-size: 1.6rem;
+
+    text-decoration: none;
+
+    color: #434343;
+  }
 }
 
 //----------promo--elements--JEWELRY--------
 
 .promo-item {
-	&--jewelry {
-		position: relative;
+  &--jewelry {
+    position: relative;
 
-		min-height: 510px;
+    min-height: 510px;
 
-		.mixin__bg-img("img__jewelry.jpg");
-		.mixin__bg-position (70% 50%);
-		.mixin__bg-repeat (no-repeat);
-	}
-	&__text--jewelry {
-		position: absolute;
-		bottom: 0%;
-		left: 100%;
+    .mixin__bg-img('img__jewelry.jpg');
+    .mixin__bg-position (70% 50%);
+    .mixin__bg-repeat (no-repeat);
+  }
+  &__text--jewelry {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
 
-		-webkit-transform-origin: 0% 100%;
-    	-moz-transform-origin: 0% 100%;
-    	-o-transform-origin: 0% 100%;
-    	-ms-transform-origin: 0% 100%;
-    	transform-origin: 0% 100%;
-		-webkit-transform: rotate(-90deg); //Chrome, Safari
-		-moz-transform: rotate(-90deg); //Firefox
-		-o-transform: rotate(-90deg); //Opera
-		-ms-transform: rotate(-90deg); //IE
-		transform: rotate(-90deg); //браузеры без префексов
-		
-		min-width: 18%;
-		max-height: 90px;
+    min-width: 18%;
+    max-height: 90px;
 
-		background-color: rgba(63, 50, 86, 88%);
-		& h1 {
-			display: inline-block;
-			padding-right: 145px;
-			padding-left: 25px;
-			padding-top: 25px;
-			padding-bottom: 20px; 
-			margin: 0;
+    -webkit-transform: rotate(-90deg); //Chrome, Safari
+       -moz-transform: rotate(-90deg); //Firefox
+        -ms-transform: rotate(-90deg); //IE
+         -o-transform: rotate(-90deg); //Opera
+            transform: rotate(-90deg); //браузеры без префексов
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
 
-			font-family: "Aparajita Regular", "Aparajita", serif;
-			font-size: 6.5rem;
-			text-transform: uppercase;
-			color: @white;
-			line-height: 6.5rem;
-		}
-		& span {
-			position: absolute;
-			top: -11%;
-			right: 10%;
+    background-color: rgba(63, 50, 86, 88%);
+    & h1 {
+      display: inline-block;
 
-			display: inline-block;
-			width: 20%;
-			height: 111%;
-			
-			color: @white;
-			text-align: center;
-			vertical-align: middle;
-			font-size: 2rem;
-			line-height: 10rem;
+      margin: 0;
+      padding-top: 25px;
+      padding-right: 145px;
+      padding-bottom: 20px;
+      padding-left: 25px;
 
-			background-color: @bg-color-red;
-		}
-		& span::before {
-			content: "";
+      font-family: 'Aparajita Regular', 'Aparajita', serif;
+      font-size: 6.5rem;
+      line-height: 6.5rem;
 
-			position: absolute;
-			top: -1%;
-   			right: 100%;
+      text-transform: uppercase;
 
-			display: block;
+      color: @white;
+    }
+    & span {
+      position: absolute;
+      top: -11%;
+      right: 10%;
 
-			border-bottom: 5px solid #c6535d;
-			border-right: 5px solid #c6535d;
-			border-top: 5px solid transparent;
-			border-left: 5px solid transparent;
-		}
-	}
-	&__link--jewelry {
-		text-decoration: none;
-		color: @white;
+      display: inline-block;
 
-		display: inline-block;
-	}
+      width: 20%;
+      height: 111%;
 
-//---------icon--fonts-------------
+      font-size: 2rem;
+      line-height: 10rem;
 
-	&__text-clock--icon-font::after {
-		content: "\e802";
+      text-align: center;
+      vertical-align: middle;
 
-		font-family: "fontello";
-		font-size: 5rem;
-		line-height: 10.3rem;
-	}
-	
-//___________HOVER________
+      color: @white;
+      background-color: @bg-color-red;
+    }
+    & span::before {
+      position: absolute;
+      top: -1%;
+      right: 100%;
 
-	&--jewelry:hover .promo-item__link--jewelry {
+      display: block;
 
-		transform: scale(1.1);
-		transition-duration: 0.4s;
-		transition-timing-function: ease-out;
-	}
+      border-top: 5px solid transparent;
+      border-right: 5px solid #c6535d;
+      border-bottom: 5px solid #c6535d;
+      border-left: 5px solid transparent;
 
+      content: '';
+    }
+  }
+  &__link--jewelry {
+    display: inline-block;
 
-	
+    text-decoration: none;
+
+    color: @white;
+  }
+  //---------icon--fonts-------------
+  &__text-clock--icon-font::after {
+    font-family: 'fontello';
+    font-size: 5rem;
+    line-height: 10.3rem;
+
+    content: '\e802';
+  }
+  //___________HOVER________
+  &--jewelry:hover .promo-item__link--jewelry {
+    transition-timing-function: ease-out;
+    transition-duration: .4s;
+    transform: scale(1.1);
+  }
 }

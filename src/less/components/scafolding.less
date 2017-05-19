@@ -8,18 +8,7 @@
 // Correct `block` display not defined in IE 8/9.
 //
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
   display: block;
 }
 
@@ -27,9 +16,7 @@ summary {
 // Correct `inline-block` display not defined in IE 8/9.
 //
 
-audio,
-canvas,
-video {
+audio,canvas,video {
   display: inline-block;
 }
 
@@ -40,6 +27,7 @@ video {
 
 audio:not([controls]) {
   display: none;
+
   height: 0;
 }
 
@@ -48,8 +36,7 @@ audio:not([controls]) {
 // Hide the `template` element in IE, Safari, and Firefox < 22.
 //
 
-[hidden],
-template {
+[hidden],template {
   display: none;
 }
 
@@ -65,7 +52,8 @@ template {
 
 html {
   font-family: sans-serif; // 1
-  -ms-text-size-adjust: 100%; // 2
+
+      -ms-text-size-adjust: 100%; // 2
   -webkit-text-size-adjust: 100%; // 2
 }
 
@@ -101,8 +89,7 @@ a:focus {
 // Improve readability when focused and also mouse hovered in all browsers.
 //
 
-a:active,
-a:hover {
+a:active,a:hover {
   outline: 0;
 }
 
@@ -112,37 +99,39 @@ a:hover {
 // -------------CUSTOM--STYLE-----------
 
 @font-face {
-  font-family: "Lato Regular", sans-serif;
-  src:  url("../font/Lato-Regular.ttf"),
-        url("../font/Lato-Regular.eot"),
-        url("../font/Lato-Regular.woff"),
-        url("../font/Lato-Regular.otf");
+  font-family: 'Lato Regular', sans-serif;
+
+  src: url('../font/Lato-Regular.ttf'),
+  url('../font/Lato-Regular.eot'),
+  url('../font/Lato-Regular.woff'),
+  url('../font/Lato-Regular.otf');
 }
 @font-face {
-  font-family: "Aparajita Regular", "Aparajita", serif;
-  src:  url("../font/Aparajita Regular.ttf"),
-        url("../font/Aparajita Regular.oet"),
-        url("../font/Aparajita Regular.woff"),
-        url("../font/Aparajita Regular.otf");
+  font-family: 'Aparajita Regular', 'Aparajita', serif;
+
+  src: url('../font/Aparajita Regular.ttf'),
+  url('../font/Aparajita Regular.oet'),
+  url('../font/Aparajita Regular.woff'),
+  url('../font/Aparajita Regular.otf');
 }
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?10369647');
-  src: url('../font/fontello.eot?10369647#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?10369647') format('woff2'),
-       url('../font/fontello.woff?10369647') format('woff'),
-       url('../font/fontello.ttf?10369647') format('truetype'),
-       url('../font/fontello.svg?10369647#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
+
+  src: url('../font/fontello.eot?10369647');
+  src: url('../font/fontello.eot?10369647#iefix') format('embedded-opentype'),
+  url('../font/fontello.woff2?10369647') format('woff2'),
+  url('../font/fontello.woff?10369647') format('woff'),
+  url('../font/fontello.ttf?10369647') format('truetype'),
+  url('../font/fontello.svg?10369647#fontello') format('svg');
 }
 html {
+  font-family: 'Lato Regular', sans-serif;
   font-size: @html-size-base;
-  font-family: "Lato Regular", sans-serif;
-   font-weight: 300;
+  font-weight: 300;
 }
 
-use,
-svg {
+use,svg {
   margin: 0;
 }

@@ -1,9 +1,9 @@
-@red        : #CC594A;
-@yellow     : #B8CC24;
-@blue       : #8BC5FF;
-@purple     : #6F3596;
-@black		: #000000;
-@white		: #ffffff;
+@red        : #cc594a;
+@yellow     : #b8cc24;
+@blue       : #8bc5ff;
+@purple     : #6f3596;
+@black		: #000;
+@white		: #fff;
 
 @font-color-red: #ef5966;
 @font-color-blue: #00a1be;
@@ -15,8 +15,8 @@
 @bg-color-red: #f0626e;
 
 
-@src-img: "../img/";
-@src-fonts: "fonts/";
+@src-img: '../img/';
+@src-fonts: 'fonts/';
 
 
 //--------------font-------------
@@ -44,7 +44,7 @@
 @font-size--h6: @font-size;
 @font-family: Helvetica, Arial, sans-serif;
 @font-family--headings: @font-family;
-@font-family--monospace: Monaco, Consolas, "Courier New", monospace;
+@font-family--monospace: Monaco, Consolas, 'Courier New', monospace;
 
 //-------------breakpoints--in--grid--system----------------------
 
@@ -58,31 +58,31 @@
 
 
 .mixin__float--left(@float: left) {
-	float: @float;
+  float: @float;
 }
 
 //-----------------------Примеси размеров и бордюров----------------------
 
 
 .mixin__block-width-height(@width: 100%, @height: auto) {
-	width: @width;
-	height: @height;
+  width: @width;
+  height: @height;
 };
 
 .mixin__block-min-width-height(@width: 100%, @height: auto) {
-	min-width: @width;
-	min-height: @height;
+  min-width: @width;
+  min-height: @height;
 };
 
-.mixin__padding-margin (@padding: 10px, @margin: 0px) {
-	padding: @padding;
-	margin: @margin;
+.mixin__padding-margin (@padding: 10px, @margin: 0) {
+  margin: @margin;
+  padding: @padding;
 }
 
 .mixin__border (@border-width: 2px, @border-style: solid, @border-color: @black) {
-	border-width: @border-width;
-	border-style: @border-style;
-	border-color: @border-color;
+  border-width: @border-width;
+  border-style: @border-style;
+  border-color: @border-color;
 }
 
 //-----------------------Примеси фонов----------------------
@@ -90,59 +90,56 @@
 
 
 .mixin__bg-color (@bg-color) {
-	background-color: @bg-color;
+  background-color: @bg-color;
 };
 .mixin__bg-img(@img-name) {
-	background-image: url("@{src-img}@{img-name}");
+  background-image: url('@{src-img}@{img-name}');
 };
 .mixin__bg-position (@bg-position: center) {
-	background-position: @bg-position;
+  background-position: @bg-position;
 };
 .mixin__bg-repeat (@bg-repeate: no-repeat) {
-	background-repeat: @bg-repeate;
+  background-repeat: @bg-repeate;
 };
 .mixin__bg-attachment (@bg-attachment: scroll) {
-	background-attachment: @bg-attachment;
+  background-attachment: @bg-attachment;
 };
 
 .mixin__bg (@bg-attachment: scroll, @bg-color, @bg-img-name, @bg-position: center, @bg-repeate: no-repeat) {
-	background-attachment: @bg-attachment;
-	background-color: @bg-color;
-	background-image: url("@{src-img}@{img-name}");
-	background-position: @bg-position;
-	background-repeat: @bg-repeate;
+  background-color: @bg-color;
+  background-image: url('@{src-img}@{img-name}');
+  background-repeat: @bg-repeate;
+  background-attachment: @bg-attachment;
+  background-position: @bg-position;
 };
 
 
 //------------------class-------------
 
 .clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
+  display: table;
+  clear: both;
+
+  content: '';
 }
 
 
 .site-button () {
-	display: inline-block;
-	.mixin__padding-margin(25px 6.0%, 0);
-	
-	border: none;
-	border-radius: 3px;
-	.mixin__bg-color (@font-color-blue);
+  display: inline-block;
 
-	font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif;
-	font-size: 1.4rem;
-	text-transform: uppercase;
-	color: @white;
+  border: none;
 
-	&:hover{
-			
-		background: darken(@btn-shadow-color, 30%);
-	}	
+  font-family: 'OpenSans-Bold', Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+
+  text-transform: uppercase;
+
+  color: @white;
+  border-radius: 3px;
+
+  .mixin__padding-margin(25px 6.0%, 0);
+  .mixin__bg-color (@font-color-blue);
+  &:hover {
+    background: darken(@btn-shadow-color, 30%);
+  }
 }
-
-
-
-
-
